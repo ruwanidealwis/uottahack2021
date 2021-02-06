@@ -21,7 +21,7 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('APP NAME'),
+          title: Text('Wellness App: Home Page'),
         ),
         body: SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -38,6 +38,11 @@ class _HomeState extends State<HomePage> {
             ]
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          //tooltip: 'Increment',
+          child: Text('profile'),
+        ),
     );
   }
 }
@@ -52,6 +57,14 @@ class QuoteBlock extends StatelessWidget {
           color: Colors.grey,
           width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: NetworkImage(
+                      "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef"
+                  ),
+                  fit: BoxFit.cover
+              )
+          ),
         )
     );
   }
@@ -60,14 +73,64 @@ class QuoteBlock extends StatelessWidget {
 class Reminders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * 0.15,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+              Water(),
+              Stretch(),
+              Sleep(),
+              //sleep
+              //stretch
+            ]
+        )
+    );
+  }
+}
+
+class Water extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
-          child: Text('reminders'),
+          child: Text('water'),
           color: Colors.red,
-          width: MediaQuery.of(context).size.width * 0.95,
-          height: MediaQuery.of(context).size.height * 0.20,
-        ),
+          width: MediaQuery.of(context).size.width * 0.3,
+          height: MediaQuery.of(context).size.height
+        )
+    );
+  }
+}
+
+class Stretch extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Container(
+          child: Text('stretch'),
+          color: Colors.red,
+          width: MediaQuery.of(context).size.width * 0.3,
+          height: MediaQuery.of(context).size.height * 0.35,
+        )
+    );
+  }
+}
+
+class Sleep extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Container(
+          child: Text('sleep'),
+          color: Colors.red,
+          width: MediaQuery.of(context).size.width * 0.30,
+          height: MediaQuery.of(context).size.height * 0.35,
+        )
     );
   }
 }
