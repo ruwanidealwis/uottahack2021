@@ -38,11 +38,12 @@ class _HomeState extends State<HomePage> {
             ]
           ),
         ),
+        /*
         floatingActionButton: FloatingActionButton(
           onPressed: (){},
           //tooltip: 'Increment',
           child: Text('profile'),
-        ),
+        ),*/
     );
   }
 }
@@ -54,9 +55,10 @@ class QuoteBlock extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
           child: Text('QuoteBlock'),
-          color: Colors.grey,
+          //color: Colors.grey,
           width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
+
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
