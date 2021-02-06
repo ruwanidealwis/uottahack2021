@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:uottahack/screens/authentication/authentication.dart';
-import 'package:uottahack/screens/home/wrapper.dart';
+import 'package:uottahack/screens/authentication/welcome.dart';
+import 'package:uottahack/screens/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-import 'package:uottahack/screens/authentication/authentication.dart';
+import 'package:uottahack/screens/authentication/welcome.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
