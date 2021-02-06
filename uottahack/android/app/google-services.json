@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "651237866190",
+    "project_id": "uottahack2021-835d1",
+    "storage_bucket": "uottahack2021-835d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651237866190:android:f64c4b320bfaf99d2cee9f",
+        "android_client_info": {
+          "package_name": "com.uottahack_2021.uottahack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651237866190-d9lmjinmcpr52nr2jqj7eedkomso9t1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw0BWskPoPyBWorHuwRwgm0RYXn5BVAtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651237866190-d9lmjinmcpr52nr2jqj7eedkomso9t1s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
