@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:uottahack/screens/home/wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 
+import 'package:uottahack/screens/1welcome.dart';
+//import 'package:uottahack/screens/authentication/authentication.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -9,10 +12,12 @@ void main() async {
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Wrapper());
+    return new MaterialApp(
+      home: new WelcomeScreen(), //widget for first screen you're on!
+    );
   }
 }
