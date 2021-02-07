@@ -1,7 +1,7 @@
 class ReasourceData {
   final String type;
   final String message;
-  final List<String> links;
+  final List links;
 
   ReasourceData({this.type, this.message, this.links});
 }

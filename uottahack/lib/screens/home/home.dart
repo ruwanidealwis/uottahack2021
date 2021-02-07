@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uottahack/screens/feelings/feelings.dart';
 import 'reminders.dart';
 
 //This will become the home page (see Sandy's prototypes)
@@ -52,7 +53,7 @@ class QuoteBlock extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
-          child: Image.asset('assets/images/raj_in_a_slumber.png'),
+          //child: Image.asset('assets/images/raj_in_a_slumber.png'),
           //Text('QuoteBlock'),
 
           //color: Colors.grey,
@@ -147,7 +148,8 @@ class Feelings extends StatelessWidget {
   Widget build(BuildContext context) {
     return new GestureDetector(
         onTap: () {
-          print('INSERT FEELINGS REMINDER');
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => FeelingSurvey()));
         },
         child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
