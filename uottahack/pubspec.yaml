@@ -64,6 +64,7 @@ flutter:
     - assets/images/summer.jpg #day banner/bckg for quote 2 - home.dart
     - assets/images/sunrise.jpg #day banner/bckg for quote 3 - home.dart
     - assets/images/timbit.png #logo - welcome.dart
+    - assets/images/timbit_resized.png #logo - cropped
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
