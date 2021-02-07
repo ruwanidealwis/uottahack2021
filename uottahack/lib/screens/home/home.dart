@@ -1,5 +1,9 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:uottahack/Models/ReminderModel.dart';
+import 'package:uottahack/firebase/user.dart';
 import 'package:uottahack/screens/feelings/feelings.dart';
+import 'package:uottahack/screens/home/carouselCard.dart';
 import 'reminders.dart';
 
 //This will become the home page (see Sandy's prototypes)
@@ -47,25 +51,69 @@ class _HomeState extends State<HomePage> {
   }
 }
 
-class QuoteBlock extends StatelessWidget {
+class QuoteBlock extends StatefulWidget {
+  @override
+  _QuoteBlockState createState() => _QuoteBlockState();
+}
+
+class _QuoteBlockState extends State<QuoteBlock> {
+  DatabaseUser user = new DatabaseUser();
+  Future future;
+  int _currentIndex = 0;
+  @override
+  void initState() {
+    super.initState();
+
+    // assign this variable your Future
+    future = user.getUsersReminders();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: Container(
-          //child: Image.asset('assets/images/raj_in_a_slumber.png'),
-          //Text('QuoteBlock'),
-
-          //color: Colors.grey,
-          width: MediaQuery.of(context).size.width * 0.95,
-          height: MediaQuery.of(context).size.height * 0.30,
-
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(
-                      "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef"),
-                  fit: BoxFit.cover)),
-        ));
+    return FutureBuilder<List<ReminderModel>>(
+      future: future, // function where you call your api
+      builder:
+          (BuildContext context, AsyncSnapshot<List<ReminderModel>> snapshot) {
+        // AsyncSnapshot<Your object type>
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return ClipRRect(child: Text('Loading Your Reminders...'));
+        } else {
+          if (snapshot.hasError)
+            return ClipRRect(child: Text('Error: ${snapshot.error}'));
+          else
+            return ClipRRect(
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  height: 200.0,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 3),
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  pauseAutoPlayOnTouch: true,
+                  aspectRatio: 2.0,
+                  onPageChanged: (index, reason) {
+                    setState(() {
+                      _currentIndex = index;
+                    });
+                  },
+                ),
+                items: snapshot.data.map((card) {
+                  return Builder(builder: (BuildContext context) {
+                    return Container(
+                      height: MediaQuery.of(context).size.height * 0.30,
+                      width: MediaQuery.of(context).size.width,
+                      child: Card(
+                        color: Color.fromRGBO(197, 160, 238, 1),
+                        child: CaraouselCard(reminderModel: card),
+                      ),
+                    );
+                  });
+                }).toList(),
+              ),
+            ); // snapshot.data  :- get your object which is pass from your downloadData() function
+        }
+      },
+    );
   }
 }
 
