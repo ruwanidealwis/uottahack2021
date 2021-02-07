@@ -21,3 +21,5 @@ Through _Check In_, users can input reminders for drinking water, stretching, an
 ## What we learned
 
 ## What's next for Check In
+These are the features we hope to implement as we continue working on _Check In_:
+* Providing users with the option to connect their Spotify accounts, so _Check In_ can recommend songs and playlists that match their mood. The music will be filtered according to tone, beats per minute, key, volume, pitch, and cadence. 
