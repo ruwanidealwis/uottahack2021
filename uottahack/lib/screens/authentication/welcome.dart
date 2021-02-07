@@ -30,7 +30,7 @@ class _WelcomeState extends State<Welcome> {
                   width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 RaisedButton(
-                    color: Colors.deepPurpleAccent,
+                    color: Color.fromRGBO(197, 159, 238, 1),
                     onPressed: () {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) => SignIn()));
@@ -42,7 +42,7 @@ class _WelcomeState extends State<Welcome> {
                     child: Text("Sign In")),
                 Spacer(),
                 RaisedButton(
-                    color: Colors.deepPurpleAccent,
+                    color: Color.fromRGBO(197, 159, 238, 1),
                     onPressed: () {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) => Register()));

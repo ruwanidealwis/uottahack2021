@@ -97,7 +97,7 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
             Center(
               child: RaisedButton(
-                  color: Colors.deepPurpleAccent,
+                  color: Color.fromRGBO(197, 159, 238, 1),
                   padding: EdgeInsets.symmetric(
                     vertical: MediaQuery.of(context).size.height * 0.02,
                     horizontal: MediaQuery.of(context).size.width * 0.15,
