@@ -110,6 +110,7 @@ class Stretch extends StatelessWidget {
     return new GestureDetector(
         onTap: () {
           print('INSERT STRETCH REMINDER');
+          showRemindersDialog(context, "stretching");
         },
         child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
@@ -128,6 +129,7 @@ class Sleep extends StatelessWidget {
     return new GestureDetector(
         onTap: () {
           print('INSERT SLEEP REMINDER');
+          showRemindersDialog(context, "sleep");
         },
         child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
