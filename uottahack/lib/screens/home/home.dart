@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'reminders.dart';
 
 //This will become the home page (see Sandy's prototypes)
 
@@ -98,6 +99,7 @@ class Water extends StatelessWidget {
     return new GestureDetector(
         onTap: (){
           print('INSERT WATER Reminder');
+          showRemindersDialog(context, "water"); //, 'water');
           },
         child: ClipRRect(
           borderRadius: BorderRadius.circular(8.0),
@@ -171,3 +173,4 @@ class Feelings extends StatelessWidget {
     );
   }
 }
+
