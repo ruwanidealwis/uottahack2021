@@ -22,7 +22,7 @@ class _HomeState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Wellness App: Home Page'),
+        title: Text('Wellness App: Home Pagez'),
       ),
       body: SizedBox(
         width: MediaQuery.of(context).size.width,

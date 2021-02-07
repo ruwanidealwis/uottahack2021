@@ -16,7 +16,7 @@ class _FeelingSurveyState extends State<FeelingSurvey> {
     } else {
       //load help view
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => HelpView(type: _feeling)));
+          MaterialPageRoute(builder: (context) => HelpView(type: feeling)));
     }
   }
 

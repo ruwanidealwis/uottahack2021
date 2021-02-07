@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      home: new HomePage(), //widget for first screen you're on!
+      home: new Wrapper(), //widget for first screen you're on!
     );
   }
 }
