@@ -11,6 +11,7 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final FirebaseAuth auth = FirebaseAuth.instance;
     print(auth.currentUser);
+
     if (auth.currentUser == null) {
       return Welcome();
     } else {
