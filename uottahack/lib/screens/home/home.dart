@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'reminders.dart';
 
 //This will become the home page (see Sandy's prototypes)
 
@@ -51,10 +52,13 @@ class QuoteBlock extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
-          child: Text('QuoteBlock'),
+          child: Image.asset('assets/images/raj_in_a_slumber.png'),
+          //Text('QuoteBlock'),
+
           //color: Colors.grey,
           width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
+
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
@@ -85,54 +89,71 @@ class Reminders extends StatelessWidget {
 class Water extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: Container(
-            child: Text('water'),
-            color: Colors.red,
-            width: MediaQuery.of(context).size.width * 0.3,
-            height: MediaQuery.of(context).size.height));
+    return new GestureDetector(
+        onTap: () {
+          print('INSERT WATER Reminder');
+          showRemindersDialog(context, "water"); //, 'water');
+        },
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Container(
+                child: Text('water'),
+                color: Colors.red,
+                width: MediaQuery.of(context).size.width * 0.3,
+                height: MediaQuery.of(context).size.height)));
   }
 }
 
 class Stretch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: Container(
-          child: Text('stretch'),
-          color: Colors.red,
-          width: MediaQuery.of(context).size.width * 0.3,
-          height: MediaQuery.of(context).size.height * 0.35,
-        ));
+    return new GestureDetector(
+        onTap: () {
+          print('INSERT STRETCH REMINDER');
+        },
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Container(
+              child: Text('stretch'),
+              color: Colors.red,
+              width: MediaQuery.of(context).size.width * 0.3,
+              height: MediaQuery.of(context).size.height * 0.35,
+            )));
   }
 }
 
 class Sleep extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: Container(
-          child: Text('sleep'),
-          color: Colors.red,
-          width: MediaQuery.of(context).size.width * 0.30,
-          height: MediaQuery.of(context).size.height * 0.35,
-        ));
+    return new GestureDetector(
+        onTap: () {
+          print('INSERT SLEEP REMINDER');
+        },
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Container(
+              child: Text('sleep'),
+              color: Colors.red,
+              width: MediaQuery.of(context).size.width * 0.30,
+              height: MediaQuery.of(context).size.height * 0.35,
+            )));
   }
 }
 
 class Feelings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: Container(
-          child: Text('feelings'),
-          color: Colors.green,
-          width: MediaQuery.of(context).size.width * 0.95,
-          height: MediaQuery.of(context).size.height * 0.35,
-        ));
+    return new GestureDetector(
+        onTap: () {
+          print('INSERT FEELINGS REMINDER');
+        },
+        child: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Container(
+              child: Text('feelings'),
+              color: Colors.green,
+              width: MediaQuery.of(context).size.width * 0.95,
+              height: MediaQuery.of(context).size.height * 0.35,
+            )));
   }
 }
