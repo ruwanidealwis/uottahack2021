@@ -30,11 +30,11 @@ class _WelcomeState extends State<Welcome> {
                   width: MediaQuery.of(context).size.width * 0.05,
                 ),
                 RaisedButton(
-                    color: Color.fromRGBO(197, 159, 238, 1),
                     onPressed: () {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) => SignIn()));
                     },
+                    color: Color.fromRGBO(197, 159, 238, 1),
                     padding: EdgeInsets.symmetric(
                       vertical: MediaQuery.of(context).size.width * 0.10,
                       horizontal: MediaQuery.of(context).size.width * 0.15,

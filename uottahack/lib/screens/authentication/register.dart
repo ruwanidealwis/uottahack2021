@@ -82,7 +82,7 @@ class _RegisterFormState extends State<RegisterForm> {
                     controller: passwordController,
                     obscureText: true,
                     decoration: const InputDecoration(
-                        labelText: 'Passowrd', hintText: "Passwords must be X "),
+                        labelText: 'Password', hintText: "Passwords must be X "),
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Please enter a valid password';

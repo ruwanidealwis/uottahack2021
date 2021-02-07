@@ -41,61 +41,101 @@ class _HelpViewState extends State<HelpView> {
       builder: (BuildContext context, AsyncSnapshot<ReasourceData> snapshot) {
         // AsyncSnapshot<Your object type>
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: Text('Please wait its loading...'));
+          return Scaffold(
+            body: Center(
+                child: Text('Please wait its loading...',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40.0,)
+                    ),
+                )
+            );
         } else {
           if (snapshot.hasError)
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(
+                child: Text('Error: ${snapshot.error}')
+            );
           else
             return Scaffold(
+                backgroundColor: Color.fromRGBO(205, 227, 244, 1),
                 body: Column(children: [
-              Text('${snapshot.data.type}'),
-              Text('${snapshot.data.message}'),
-              YoutubePlayer(
-                controller: YoutubePlayerController(
-                  initialVideoId:
-                      YoutubePlayer.convertUrlToId(snapshot.data.links[0]),
-                  flags: YoutubePlayerFlags(
-                    autoPlay: false,
-                    mute: true,
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.05,
                   ),
-                ),
-                showVideoProgressIndicator: true,
-                progressIndicatorColor: Colors.amber,
-                onReady: () {
-                  print("player ready..");
-                },
-              ),
-              YoutubePlayer(
-                controller: YoutubePlayerController(
-                  initialVideoId:
-                      YoutubePlayer.convertUrlToId(snapshot.data.links[1]),
-                  flags: YoutubePlayerFlags(
-                    autoPlay: false,
-                    mute: true,
+                  Text('${snapshot.data.type}',
+                    style: TextStyle(
+                    color: Colors.black,
+                      fontSize: 40.0,)
                   ),
-                ),
-                showVideoProgressIndicator: true,
-                progressIndicatorColor: Colors.amber,
-                onReady: () {
-                  print("player ready..");
-                },
-              ),
-              YoutubePlayer(
-                controller: YoutubePlayerController(
-                  initialVideoId:
-                      YoutubePlayer.convertUrlToId(snapshot.data.links[2]),
-                  flags: YoutubePlayerFlags(
-                    autoPlay: false,
-                    mute: true,
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.02,
                   ),
-                ),
-                showVideoProgressIndicator: true,
-                progressIndicatorColor: Colors.amber,
-                onReady: () {
-                  print("player ready..");
-                },
-              ),
-            ])); // snapshot.data  :- get your object which is pass from your downloadData() function
+                  Text('${snapshot.data.message}',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20.0,)
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                  ),
+                  YoutubePlayer(
+                    controller: YoutubePlayerController(
+                      initialVideoId:
+                          YoutubePlayer.convertUrlToId(snapshot.data.links[0]),
+                      flags: YoutubePlayerFlags(
+                        autoPlay: false,
+                        mute: true,
+                      ),
+                    ),
+                    showVideoProgressIndicator: true,
+                    progressIndicatorColor: Colors.amber,
+                    onReady: () {
+                      print("player ready..");
+                    },
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  YoutubePlayer(
+                    controller: YoutubePlayerController(
+                      initialVideoId:
+                          YoutubePlayer.convertUrlToId(snapshot.data.links[1]),
+                      flags: YoutubePlayerFlags(
+                        autoPlay: false,
+                        mute: true,
+                      ),
+                    ),
+                    showVideoProgressIndicator: true,
+                    progressIndicatorColor: Colors.amber,
+                    onReady: () {
+                      print("player ready..");
+                    },
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                  YoutubePlayer(
+                    controller: YoutubePlayerController(
+                      initialVideoId:
+                          YoutubePlayer.convertUrlToId(snapshot.data.links[2]),
+                      flags: YoutubePlayerFlags(
+                        autoPlay: false,
+                        mute: true,
+                      ),
+                    ),
+                    showVideoProgressIndicator: true,
+                    progressIndicatorColor: Colors.amber,
+                    onReady: () {
+                      print("player ready..");
+                    },
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.02,
+                  ),
+                ]
+                )
+            ); // snapshot.data  :- get your object which is pass from your downloadData() function
         }
       },
     );
