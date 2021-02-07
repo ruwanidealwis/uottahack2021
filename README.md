@@ -25,7 +25,7 @@ The team is proud of having developed a complete product in the span of a weeken
 ## What we learned
 Although we had to make concessions, we learned that sometimes having to make such sacrifices can end up having a positive effect. Adding some of the features we had originally planned could overwhelm the user and ultimately work against our overarching goal.
 
-## What's next for Check In
+## What's next for _**Check In**_
 These are the features we hope to implement as we continue working on _Check In_:
 * Providing users with the option to connect their Spotify accounts, so _Check In_ can recommend songs and playlists that match their mood. The music will be filtered according to tone, beats per minute (BPM), key, volume, pitch, and cadence. 
 * Customizing reminders outside of the three that are offered currently. 
