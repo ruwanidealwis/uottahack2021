@@ -198,7 +198,7 @@ class Stretch extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/icon_strech.png"),
+                  image: AssetImage("assets/images/icon_stretch.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -222,7 +222,7 @@ class Sleep extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/icon_water.png"),
+                  image: AssetImage("assets/images/icon_sleep.png"),
                   fit: BoxFit.cover,
                 ),
               ),
