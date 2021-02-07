@@ -14,4 +14,12 @@ class DatabaseUser {
         });
     return true;
   }
+
+  bool addReminders(String UID, String day, String reminder)
+  {
+
+  }
+  {
+
+  }
 }
