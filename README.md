@@ -17,7 +17,7 @@ According to the choice made above, the user will be led to a page where, alongs
 _Check In_ is built using Flutter in an Android development environment, and Firebase as the backend using MaterialUI guidelines. 
 
 ## Challenges we ran into
-Additionally, when there is a time crunch, it is inevitable that concessions will have to be made. We originally intended for the user to have push notifications, but adding this functionality proved to be too complex for the allocated time, so it was replaced by a carousel at the top of the home page. 
+Developing a product using an SDK not experimented with previously, offered plenty of positive challenges. Additionally, when there is a time crunch, it is inevitable that concessions will have to be made. We originally intended for the user to have push notifications, but adding this functionality proved to be too complex for the allocated time, so it was replaced by a carousel at the top of the home page. The challenges faced, we believe, have made us just that much wiser. 
 
 ## Accomplishments that we're proud of
 The team is proud of having developed a complete product in the span of a weekend. Not only that, but we are proud of having had the courage to experiment with and develop this app through flutter, dart, and firebase - all tools previously foreign to us. 
