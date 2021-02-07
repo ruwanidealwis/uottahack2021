@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:uottahack/firebase/auth.dart';
+import 'package:uottahack/screens/home/home.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -82,6 +83,9 @@ class _RegisterFormState extends State<RegisterForm> {
                         passwordController.text);
                     if (user.runtimeType == "String") {
                       print(user);
+                    } else {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     }
 
                     // Process data.

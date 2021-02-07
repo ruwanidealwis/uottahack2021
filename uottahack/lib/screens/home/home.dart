@@ -9,7 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
-
   //define any class variables here
   //
 
@@ -20,12 +19,12 @@ class _HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Wellness App: Home Page'),
-        ),
-        body: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          child: Column(
+      appBar: AppBar(
+        title: Text('Wellness App: Home Page'),
+      ),
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: Column(
             //padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
             //center: true,
             //width: MediaQuery.of(context).size.width,
@@ -35,14 +34,13 @@ class _HomeState extends State<HomePage> {
               QuoteBlock(),
               Reminders(),
               Feelings(),
-            ]
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){},
-          //tooltip: 'Increment',
-          child: Text('profile'),
-        ),
+            ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        //tooltip: 'Increment',
+        child: Text('profile'),
+      ),
     );
   }
 }
@@ -54,19 +52,15 @@ class QuoteBlock extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
           child: Text('QuoteBlock'),
-          color: Colors.grey,
+          //color: Colors.grey,
           width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.30,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                      "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef"
-                  ),
-                  fit: BoxFit.cover
-              )
-          ),
-        )
-    );
+                      "https://images.unsplash.com/photo-1579202673506-ca3ce28943ef"),
+                  fit: BoxFit.cover)),
+        ));
   }
 }
 
@@ -77,16 +71,14 @@ class Reminders extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 0.15,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
               Water(),
               Stretch(),
               Sleep(),
               //sleep
               //stretch
-            ]
-        )
-    );
+            ]));
   }
 }
 
@@ -96,12 +88,10 @@ class Water extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
-          child: Text('water'),
-          color: Colors.red,
-          width: MediaQuery.of(context).size.width * 0.3,
-          height: MediaQuery.of(context).size.height
-        )
-    );
+            child: Text('water'),
+            color: Colors.red,
+            width: MediaQuery.of(context).size.width * 0.3,
+            height: MediaQuery.of(context).size.height));
   }
 }
 
@@ -115,8 +105,7 @@ class Stretch extends StatelessWidget {
           color: Colors.red,
           width: MediaQuery.of(context).size.width * 0.3,
           height: MediaQuery.of(context).size.height * 0.35,
-        )
-    );
+        ));
   }
 }
 
@@ -130,8 +119,7 @@ class Sleep extends StatelessWidget {
           color: Colors.red,
           width: MediaQuery.of(context).size.width * 0.30,
           height: MediaQuery.of(context).size.height * 0.35,
-        )
-    );
+        ));
   }
 }
 
@@ -145,7 +133,6 @@ class Feelings extends StatelessWidget {
           color: Colors.green,
           width: MediaQuery.of(context).size.width * 0.95,
           height: MediaQuery.of(context).size.height * 0.35,
-        )
-    );
+        ));
   }
 }
