@@ -28,6 +28,7 @@ class _SignInFormState extends State<SignInForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Color.fromRGBO(205, 227, 244, 1),
       //width: MediaQuery.of(context).size.width * 0.8,
       padding: EdgeInsets.symmetric(
         vertical: MediaQuery.of(context).size.width * 0.07,
@@ -39,11 +40,10 @@ class _SignInFormState extends State<SignInForm> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Image.asset('assets/images/timbit.png',
+            ),
             Column(
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.1,
-                ),
                 TextFormField(
                   controller: emailController,
                   decoration: const InputDecoration(

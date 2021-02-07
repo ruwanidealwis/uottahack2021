@@ -51,7 +51,11 @@ class _WelcomeState extends State<Welcome> {
                       vertical: MediaQuery.of(context).size.width * 0.10,
                       horizontal: MediaQuery.of(context).size.width * 0.15,
                     ),
-                    child: Text("Sign Up")
+                    child: Text("Sign Up",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20.0,)
+                    )
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.05,
