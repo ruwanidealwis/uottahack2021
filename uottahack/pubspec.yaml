@@ -52,7 +52,7 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/images/add_reminder_sleep.png #add reminder image for sleeping - home.dart
+    - assets/images/add_reminder_sleep.jpg #add reminder image for sleeping - home.dart
     - assets/images/add_reminder_stretch.png #add reminder image for stretching - home.dart
     - assets/images/add_reminder_water.jpg #add reminder image for water - home.dart
     - assets/images/icon_sleep.png #sleep icon for pop-up - home.dart

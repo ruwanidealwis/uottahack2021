@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uottahack/Models/ReminderModel.dart';
 
+//code adapted from: https://medium.com/flutter-community/how-to-create-card-carousel-in-flutter-979bc8ecf19
 class CaraouselCard extends StatefulWidget {
   final ReminderModel reminderModel;
   CaraouselCard({Key key, this.reminderModel}) : super(key: key);
@@ -22,11 +23,6 @@ class _CaraouselCardState extends State<CaraouselCard> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text("Hi",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.bold)),
           Text(widget.reminderModel.message,
               style: TextStyle(
                   color: Colors.white,

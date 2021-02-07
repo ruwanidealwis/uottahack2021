@@ -70,6 +70,14 @@ class _QuoteBlockState extends State<QuoteBlock> {
 
   @override
   Widget build(BuildContext context) {
+    List<T> map<T>(List list, Function handler) {
+      List<T> result = [];
+      for (var i = 0; i < list.length; i++) {
+        result.add(handler(i, list[i]));
+      }
+      return result;
+    }
+
     return FutureBuilder<List<ReminderModel>>(
       future: future, // function where you call your api
       builder:
@@ -82,7 +90,8 @@ class _QuoteBlockState extends State<QuoteBlock> {
             return ClipRRect(child: Text('Error: ${snapshot.error}'));
           else
             return ClipRRect(
-              child: CarouselSlider(
+                child: Column(children: [
+              CarouselSlider(
                 options: CarouselOptions(
                   height: 200.0,
                   autoPlay: true,
@@ -110,7 +119,24 @@ class _QuoteBlockState extends State<QuoteBlock> {
                   });
                 }).toList(),
               ),
-            ); // snapshot.data  :- get your object which is pass from your downloadData() function
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: map<Widget>(snapshot.data, (index, url) {
+                  return Container(
+                    width: 10.0,
+                    height: 10.0,
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: _currentIndex == index
+                          ? Colors.blueAccent
+                          : Colors.grey,
+                    ),
+                  );
+                }),
+              ),
+            ])); // snapshot.data  :- get your object which is pass from your downloadData() function
         }
       },
     );
