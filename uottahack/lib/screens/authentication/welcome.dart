@@ -11,6 +11,7 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -21,13 +22,15 @@ class _WelcomeState extends State<Welcome> {
                   //fontFamily: c
               )),
           Image.asset('assets/images/timbit.png',
-              height: 500,
-              width: 500
               ),
           Container(
             child: Row(
               children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.05,
+                ),
                 RaisedButton(
+                    color: Colors.deepPurpleAccent,
                     onPressed: () {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) => SignIn()));
@@ -39,6 +42,7 @@ class _WelcomeState extends State<Welcome> {
                     child: Text("Sign In")),
                 Spacer(),
                 RaisedButton(
+                    color: Colors.deepPurpleAccent,
                     onPressed: () {
                       Navigator.push(
                           context, MaterialPageRoute(builder: (context) => Register()));
@@ -47,7 +51,12 @@ class _WelcomeState extends State<Welcome> {
                       vertical: MediaQuery.of(context).size.width * 0.10,
                       horizontal: MediaQuery.of(context).size.width * 0.15,
                     ),
-                    child: Text("Sign Up"))
+                    child: Text("Sign Up")
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.05,
+                ),
+
               ],
             ),
           ),
