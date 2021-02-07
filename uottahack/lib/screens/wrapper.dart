@@ -2,9 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
-import 'package:uottahack/screens/authentication/authentication.dart';
+import 'package:uottahack/screens/authentication/welcome.dart';
 import 'package:uottahack/screens/home/home.dart';
-import 'package:uottahack/screens/authentication/authentication.dart';
+import 'package:uottahack/screens/authentication/welcome.dart';
 
 class Wrapper extends StatelessWidget {
   @override
@@ -14,7 +14,7 @@ class Wrapper extends StatelessWidget {
     if (auth.currentUser == null) {
       return Welcome();
     } else {
-      return Home();
+      return HomePage();
     }
   }
 }
