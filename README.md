@@ -1,9 +1,6 @@
 # uottahack2021
 
-## Check In
-A wellness app. 
-
-### Inspiration
+## Inspiration
 The pandemic has exacerbated pre-existing mental health challenges. We took inspiration to make an app that can support the user when navigating daily life. As mental illnesses come in different shades, we wanted to make an app that can accommodate and at the same time, not overwhelm.
 
 ## What it does
