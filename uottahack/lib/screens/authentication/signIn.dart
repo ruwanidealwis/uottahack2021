@@ -27,36 +27,63 @@ class _SignInFormState extends State<SignInForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
+    return Container(
+      color: Color.fromRGBO(205, 227, 244, 1),
+      //width: MediaQuery.of(context).size.width * 0.8,
+      padding: EdgeInsets.symmetric(
+        vertical: MediaQuery.of(context).size.width * 0.07,
+        horizontal: MediaQuery.of(context).size.width * 0.15,
+      ),
+      child: Form(
         key: _formKey,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            TextFormField(
-              controller: emailController,
-              decoration: const InputDecoration(
-                labelText: 'Email',
-              ),
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Please enter your email';
-                }
-                return null;
-              },
+            Image.asset('assets/images/timbit.png',
             ),
-            TextFormField(
-              controller: passwordController,
-              obscureText: true,
-              decoration: const InputDecoration(
-                  labelText: 'Passowrd', hintText: "Passwords must be X "),
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Please enter a vaild password';
-                }
-                return null;
-              },
+            Column(
+              children: [
+                TextFormField(
+                  controller: emailController,
+                  decoration: const InputDecoration(
+                    labelText: 'Email',
+                  ),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Please enter your email';
+                    }
+                    return null;
+                  },
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.05,
+                ),
+                TextFormField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                      labelText: 'Password',
+                      hintText: "Please enter your password"),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Please enter a vaild password';
+                    }
+                    return null;
+                  },
+                )
+              ],
             ),
-            ElevatedButton(
+            Container(
+              height: MediaQuery.of(context).size.height * 0.15,
+            ),
+            Center(
+              child: RaisedButton(
+                color: Color.fromRGBO(197, 159, 238, 1),
+                padding: EdgeInsets.symmetric(
+                  vertical: MediaQuery.of(context).size.height * 0.02,
+                  horizontal: MediaQuery.of(context).size.width * 0.15,
+                ),
                 onPressed: () async {
                   if (_formKey.currentState.validate()) {
                     print(emailController.text);
@@ -70,8 +97,17 @@ class _SignInFormState extends State<SignInForm> {
                     // Process data.
                   } else {}
                 },
-                child: Text("Login"))
+                child: Text("Login",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20.0,
+                  ),
+                ),
+              ),
+            ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

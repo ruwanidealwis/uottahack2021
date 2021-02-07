@@ -10,22 +10,63 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-      children: [
-        RaisedButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => SignIn()));
-            },
-            child: Text("Sign In")),
-        RaisedButton(
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Register()));
-            },
-            child: Text("Sign Up"))
-      ],
-    ));
+    return Scaffold(
+      backgroundColor: Color.fromRGBO(205, 227, 244, 1),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text("Check In",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 50.0,
+                  //fontFamily: c
+              )),
+          Image.asset('assets/images/timbit.png',
+              ),
+          Container(
+            child: Row(
+              children: [
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.05,
+                ),
+                RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => SignIn()));
+                    },
+                    color: Color.fromRGBO(197, 159, 238, 1),
+                    padding: EdgeInsets.symmetric(
+                      vertical: MediaQuery.of(context).size.width * 0.10,
+                      horizontal: MediaQuery.of(context).size.width * 0.15,
+                    ),
+                    child: Text("Sign In")),
+                Spacer(),
+                RaisedButton(
+                    color: Color.fromRGBO(197, 159, 238, 1),
+                    onPressed: () {
+                      Navigator.push(
+                          context, MaterialPageRoute(builder: (context) => Register()));
+                    },
+                    padding: EdgeInsets.symmetric(
+                      vertical: MediaQuery.of(context).size.width * 0.10,
+                      horizontal: MediaQuery.of(context).size.width * 0.15,
+                    ),
+                    child: Text("Sign Up",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20.0,)
+                    )
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.05,
+                ),
+
+              ],
+            ),
+          ),
+        ],
+
+      ),
+    );
   }
 }
