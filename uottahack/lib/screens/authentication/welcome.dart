@@ -11,7 +11,7 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Color.fromRGBO(205, 227, 244, 1),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
