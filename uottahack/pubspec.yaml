@@ -50,7 +50,19 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/images/raj_in_a_slumber.png
+    - assets/images/add_reminder_sleep.png        #add reminder image for sleeping - home.dart
+    - assets/images/add_reminder_stretch.png      #add reminder image for stretching - home.dart
+    - assets/images/add_reminder_water.jpg        #add reminder image for water - home.dart
+    - assets/images/icon_sleep.png                #sleep icon for pop-up - home.dart
+    - assets/images/icon_stretch.png              #stretch icon for pop-up - home.dart
+    - assets/images/icon_water.png                #water icon for pop-up - home.dart
+    - assets/images/night_city.jpg                #night banner/bckg for quote - home.dart
+    - assets/images/night_lake.png                #night banner/bckg for quote 2 - home.dart
+    - assets/images/night_tree.jpg                #night banner/bckg for quote 3 - home.dart
+    - assets/images/spring.jpg                    #day banner/bckg for quote - home.dart
+    - assets/images/summer.jpg                    #day banner/bckg for quote 2 - home.dart
+    - assets/images/sunrise.jpg                   #day banner/bckg for quote 3 - home.dart
+    - assets/images/timbit.png                    #logo - welcome.dart
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -52,7 +52,7 @@ class QuoteBlock extends StatelessWidget {
     return ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Container(
-          child: Image.asset('assets/images/raj_in_a_slumber.png'),
+          //child: Image.asset('assets/images/raj_in_a_slumber.png'),
           //Text('QuoteBlock'),
 
           //color: Colors.grey,
