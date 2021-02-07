@@ -172,10 +172,16 @@ class Water extends StatelessWidget {
         child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
             child: Container(
-                child: Text('water'),
-                color: Colors.red,
-                width: MediaQuery.of(context).size.width * 0.3,
-                height: MediaQuery.of(context).size.height)));
+                child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/icon_water.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    child: Text('water'),
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    height: MediaQuery.of(context).size.height))));
   }
 }
 
@@ -190,8 +196,13 @@ class Stretch extends StatelessWidget {
         child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
             child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/icon_strech.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
               child: Text('stretch'),
-              color: Colors.red,
               width: MediaQuery.of(context).size.width * 0.3,
               height: MediaQuery.of(context).size.height * 0.35,
             )));
@@ -209,8 +220,13 @@ class Sleep extends StatelessWidget {
         child: ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
             child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/icon_water.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
               child: Text('sleep'),
-              color: Colors.red,
               width: MediaQuery.of(context).size.width * 0.30,
               height: MediaQuery.of(context).size.height * 0.35,
             )));

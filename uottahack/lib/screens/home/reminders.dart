@@ -7,18 +7,21 @@ showRemindersDialog(BuildContext context, String reminderType) {
   // set up the buttons
 
   String titleText = "";
-
+  String imageURL = "";
   if (reminderType == "water") {
     print('water');
     titleText = "drink water";
+    imageURL = "assets/images/icon_water.png";
   }
   if (reminderType == "stretching") {
     print('stretch');
     titleText = "stretch";
+    imageURL = "assets/images/icon_stretch.png";
   }
   if (reminderType == "sleep") {
     print('sleep');
     titleText = "sleep early";
+    imageURL = "assets/images/icon_sleep.png";
   }
 
   // set up the AlertDialog
