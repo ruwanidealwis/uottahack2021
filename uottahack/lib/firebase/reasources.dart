@@ -3,15 +3,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:uottahack/Models/ReasourceModel.dart';
 
 class Reasources {
-  Future getReasources(String type) {
+  Future<ReasourceData> getReasources(String type) async {
+    print("type " + type);
     CollectionReference reasources =
         FirebaseFirestore.instance.collection('Reasources');
 
-    reasources.where('Type', isEqualTo: type).get().then((value) {
-      print(value);
-      //ReasourceData data = new ReasourceData(type, value.metadata.message, value.link);
-      return value;
-    });
-    return null;
+    var result = await reasources.where('Type', isEqualTo: type).get();
+    dynamic data = result.docs[0].data();
+    return ReasourceData(
+        links: data['Links'], type: data['Type'], message: data['Message']);
   }
 }
